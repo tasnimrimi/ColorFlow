@@ -9,9 +9,20 @@ import 'sketchbook.dart';
 const ink = Color(0xFF293E38),
     muted = Color(0xFF606C65),
     accent = Color(0xFF365F50);
-const cream = Color(0xFFF8F6F0),
-    blush = Color(0xFFEFD5D2),
-    lilac = Color(0xFFDCE8DC);
+const cream = Color(0xFFF8F6F0), lilac = Color(0xFFDCE8DC);
+final _hexColorPattern = RegExp(r'^[0-9a-fA-F]{6}$');
+final _studioCardDecoration = BoxDecoration(
+  color: Colors.white,
+  borderRadius: BorderRadius.circular(20),
+  border: Border.all(color: const Color(0xFFDBE1D9)),
+  boxShadow: const [
+    BoxShadow(
+      color: Color(0x0C334D40),
+      offset: Offset(0, 6),
+      blurRadius: 24,
+    ),
+  ],
+);
 const palettes = <String, List<Color>>{
   'Rainbow': [
     Color(0xFFFF3B5C),
@@ -303,18 +314,7 @@ class _GradientPageState extends State<GradientPage> {
           foregroundPainter: const CanvasTape(),
           child: Container(
             padding: const EdgeInsets.all(20),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(20),
-              border: Border.all(color: const Color(0xFFDBE1D9)),
-              boxShadow: const [
-                BoxShadow(
-                  color: Color(0x0C334D40),
-                  offset: Offset(0, 6),
-                  blurRadius: 24,
-                ),
-              ],
-            ),
+            decoration: _studioCardDecoration,
             child: Column(
               children: [
                 Padding(
@@ -471,18 +471,7 @@ class _GradientPageState extends State<GradientPage> {
 
   Widget controls() => Container(
     padding: const EdgeInsets.all(24),
-    decoration: BoxDecoration(
-      color: Colors.white,
-      borderRadius: BorderRadius.circular(20),
-      border: Border.all(color: const Color(0xFFDBE1D9)),
-      boxShadow: const [
-        BoxShadow(
-          color: Color(0x0C334D40),
-          offset: Offset(0, 6),
-          blurRadius: 24,
-        ),
-      ],
-    ),
+    decoration: _studioCardDecoration,
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
@@ -739,7 +728,7 @@ class _ColorDialogState extends State<ColorDialog> {
   });
   void apply() {
     final value = controller.text.trim().replaceFirst('#', '');
-    if (!RegExp(r'^[0-9a-fA-F]{6}$').hasMatch(value)) {
+    if (!_hexColorPattern.hasMatch(value)) {
       setState(() => error = 'Enter six hex digits, like B7CCFF.');
       return;
     }
@@ -774,7 +763,7 @@ class _ColorDialogState extends State<ColorDialog> {
               inputFormatters: [LengthLimitingTextInputFormatter(7)],
               onChanged: (text) {
                 final value = text.replaceFirst('#', '');
-                if (RegExp(r'^[0-9a-fA-F]{6}$').hasMatch(value)) {
+                if (_hexColorPattern.hasMatch(value)) {
                   setState(() {
                     hsv = HSVColor.fromColor(
                       Color(int.parse('FF$value', radix: 16)),
