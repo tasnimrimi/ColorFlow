@@ -22,9 +22,6 @@ live. Download the result as a full-resolution PNG or a scalable vector SVG.
 Everything is generated on the device. No AI service, account, API key, or photo
 upload is required.
 
-> The repository keeps its original name, `Photo-into-Blank-Mockup`, but the
-> current application is **Colorflow**, a gradient maker.
-
 ## Features
 
 - Full rainbow preset, plus Daydream, Afterglow, Lagoon, Sorbet, and Midnight
@@ -83,8 +80,8 @@ export formats use the same blended palette and gradient geometry.
 ### Clone and install
 
 ```powershell
-git clone https://github.com/tasnimrimi/Photo-into-Blank-Mockup.git
-cd Photo-into-Blank-Mockup
+git clone https://github.com/tasnimrimi/ColorFlow.git
+cd ColorFlow
 flutter pub get
 ```
 
