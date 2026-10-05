@@ -19,8 +19,7 @@ Colorflow turns user-selected colors into smooth gradient backgrounds. Start wit
 a rainbow or another preset, customize the palette, and watch the canvas update
 live. Download the result as a full-resolution PNG or a scalable vector SVG.
 
-Everything is generated on the device. No AI service, account, API key, or photo
-upload is required.
+Gradients are generated locally on your device, with no account or server required.
 
 ## Features
 
@@ -144,7 +143,6 @@ pubspec.yaml              # Dependencies and Flutter configuration
 - Browser exports download a file; native platforms use the system save dialog.
 - Other platform folders are included, but full device testing across every
   platform has not been completed.
-- The original Dart package name and application identifiers are retained.
 
 ## Author
 

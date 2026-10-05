@@ -1,8 +1,8 @@
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:photo_into_blank_mockups/main.dart';
-import 'package:photo_into_blank_mockups/gradient_art.dart';
+import 'package:colorflow/main.dart';
+import 'package:colorflow/gradient_art.dart';
 
 void main() {
   test(

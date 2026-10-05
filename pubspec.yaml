@@ -1,5 +1,5 @@
-name: photo_into_blank_mockups
-description: "A new Flutter project."
+name: colorflow
+description: "ColorFlow: a smooth gradient studio with custom palettes and PNG/SVG export."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -31,9 +31,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.8
+  # Saves generated PNG and SVG gradients.
   file_picker: 10.3.10
 
 dev_dependencies:

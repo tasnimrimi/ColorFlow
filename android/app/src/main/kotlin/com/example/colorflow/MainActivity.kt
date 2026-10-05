@@ -1,4 +1,4 @@
-package com.example.photo_into_blank_mockups
+package com.example.colorflow
 
 import io.flutter.embedding.android.FlutterActivity
 
