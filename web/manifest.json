@@ -1,11 +1,11 @@
 {
-    "name": "photo_into_blank_mockups",
-    "short_name": "photo_into_blank_mockups",
+    "name": "Colorflow Gradient Studio",
+    "short_name": "Colorflow",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#F8F7FB",
+    "theme_color": "#7059D9",
+    "description": "Create colorful gradient backgrounds and export PNG or SVG.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

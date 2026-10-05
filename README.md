@@ -1,16 +1,23 @@
-# photo_into_blank_mockups
+# Colorflow
 
-A new Flutter project.
+A Flutter gradient-background maker. Pick any colors using hex values or
+hue/saturation/brightness sliders. Changes appear immediately on the canvas.
 
-## Getting Started
+- Linear gradients with adjustable direction, or centered radial gradients.
+- Full rainbow preset and five other starting palettes; add/remove/reverse colors with no fixed stop-count limit.
+- Square (1080 × 1080), wallpaper (1920 × 1080), and story (1080 × 1920).
+- Full-size PNG and genuine vector SVG exports, with no watermark.
+- Runs on-device, without AI, accounts, or photo uploads.
 
-This project is a starting point for a Flutter application.
+Open the project in Android Studio and run `lib/main.dart`, or use:
 
-A few resources to get you started if this is your first Flutter project:
+```sh
+flutter pub get
+flutter run -d chrome
+flutter analyze
+flutter test
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Native exports use the system save dialog; browsers download the file. The app
+does not persist unfinished gradients between sessions. The Dart package name
+and application identifiers remain unchanged to preserve the existing project.
